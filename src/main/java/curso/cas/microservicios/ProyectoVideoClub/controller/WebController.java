@@ -18,6 +18,14 @@ public class WebController {
     public WebController(ApplicationArguments args){
         //Mandamos a consola los argumentos
         args.getNonOptionArgs().forEach(argumento -> log.info(argumento));
+
+        boolean esta = args.containsOption("Hola");
+        if(esta){
+            log.info("Se ha encontrado Hola");
+        }else{
+            log.info("NO se ha encontrado Hola");
+        }
+
     }
 
     @GetMapping("/videoclub")
